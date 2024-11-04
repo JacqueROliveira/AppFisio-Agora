@@ -17,10 +17,11 @@ export function Login(){
                 
             </Content>*/}
             <Input
-            placeholder='Login'
+            placeholder='E-mail'
             />
             <Password
             placeholder='Senha'
+            secureTextEntry={true}
             />
             <Button 
                 title="Entrar"

@@ -23,3 +23,16 @@ export function Button({ title, type= 'PRIMARY', ...rest}:Props ){
         </>
     );
 }
+/* este atributo foi feito para ser usado principalmente na tela do Login */
+export function ButtonCadastro({title, type= 'PRIMARY', ...rest}:Props ){
+    return(
+
+    <Container 
+        type={type}
+        {...rest}>
+            <Title>
+                {title}
+            </Title>
+        </Container>
+    );
+}

@@ -21,3 +21,33 @@ export function Password({...rest}: TextInputProps){
         />
     );
 }
+
+export function Nome({...rest}: TextInputProps){
+    const {COLORS} = useTheme();
+    return(
+        <Container
+        placeholderTextColor={COLORS.STELLBLUE}
+            {...rest}
+        />
+    );
+}
+
+export function SobreNome({...rest}: TextInputProps){
+    const {COLORS} = useTheme();
+    return(
+        <Container
+        placeholderTextColor={COLORS.STELLBLUE}
+            {...rest}
+        />
+    );
+}
+
+export function Data({...rest}: TextInputProps){
+    const {COLORS} = useTheme();
+    return(
+        <Container
+        placeholderTextColor={COLORS.STELLBLUE}
+            {...rest}
+        />
+    );
+}
