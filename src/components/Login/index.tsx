@@ -4,20 +4,25 @@ import logoimg from 'assets/Logo-letra.png'
 import styled from 'styled-components';
 import { Button } from '@components/Button';
 import { Input, Password } from '@components/Input';
+import { useNavigation } from '@react-navigation/native';
+
+
+
 export function Login(){
+
+    const navigation = useNavigation();
+
+    function handleNewGroup(){
+        navigation.navigate('groupCard');
+   }
     return(
-
         <>
-        
-
         <Container>
             <Logo source={logoimg}/>
 
-            {/*<Content>
-                
-            </Content>*/}
             <Input
             placeholder='E-mail'
+            keyboardType='email-address'
             />
             <Password
             placeholder='Senha'
@@ -25,6 +30,7 @@ export function Login(){
             />
             <Button 
                 title="Entrar"
+                onPress={handleNewGroup}
             />
         </Container>
         </>

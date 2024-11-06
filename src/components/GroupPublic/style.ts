@@ -120,3 +120,12 @@ export const TextSelecao = styled.Text`
     color: ${({ theme}) => theme.COLORS.WHITE};
     font-family: ${({ theme}) => theme.FONT_FAMILY.BOLD};
 `;
+
+export const PositionScreen = styled.View`
+    flex: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+
+`;

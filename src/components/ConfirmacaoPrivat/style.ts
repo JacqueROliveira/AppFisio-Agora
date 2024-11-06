@@ -2,7 +2,7 @@ import { TouchableOpacity } from 'react-native'
 import styled from 'styled-components/native'
 
 export const Container1 = styled(TouchableOpacity)`
-    width: 90%;
+    width: 100%;
     height: 60px;
     background-color: ${({ theme }) => theme.COLORS.STELLBLUE};
     align-items: center;
@@ -13,7 +13,7 @@ export const Container1 = styled(TouchableOpacity)`
     margin-top: 12px;
 `;
 export const Container2 = styled(TouchableOpacity)`
-    width: 90%;
+    width: 100%;
     height: 60px;
     background-color: ${({ theme }) => theme.COLORS.GREEN_500};
     align-items: center;

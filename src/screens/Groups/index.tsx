@@ -14,8 +14,8 @@ export default function Groups(){
             {/*<GroupCard />*/}
             {/*<GroupPrivat/>*/}
             {/*<GroupPublic/>*/}
-            {/*<Login/>*/}
-            <Cadastro/>
+            <Login/>
+            {/*<Cadastro/>*/}
         </Container>
 
     )

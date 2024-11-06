@@ -4,7 +4,6 @@ import { TouchableOpacity } from 'react-native'
 export const Container1 = styled(TouchableOpacity)`
     width: 100%;
     height: 80´x;
-
     background-color: ${({ theme }) => theme.COLORS.WHITE};
     color: ${({ theme }) => theme.COLORS.STELLBLUE};
     border-radius: 12px;
@@ -120,4 +119,13 @@ export const TextSelecao = styled.Text`
     font-size: ${({ theme }) => theme.FONT_SIZE.XL}px;
     color: ${({ theme}) => theme.COLORS.WHITE};
     font-family: ${({ theme}) => theme.FONT_FAMILY.BOLD};
+`;
+
+export const PositionScreen = styled.View`
+    flex: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+
 `;

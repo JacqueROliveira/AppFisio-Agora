@@ -17,6 +17,7 @@ export const Container = styled(TextInput)`
     border-color: ${({ theme }) => theme.COLORS.STELLBLUE};
     margin-top: 15px;
     padding-bottom: 3px;
+    margin-bottom: 10px;
 `;
 
 export const DadosInputText = styled(TextInput)`

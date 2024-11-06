@@ -1,6 +1,7 @@
 import { Float } from 'react-native/Libraries/Types/CodegenTypes';
 import {TextSelecao, Privat, Value, Texto, Container1, Container2, Container3, Title, SubTitle, Agendar, Preco, Position} from './style'
 import { Text } from 'react-native';
+import { PositionScreen } from './style';
 type Props = {
     
     title: string;
@@ -8,6 +9,9 @@ type Props = {
 export function GroupPublic(){
     return(
         <>
+
+            <PositionScreen>
+
             <Privat>
                 <TextSelecao>
                     Atendimento Em Faculdade   
@@ -51,6 +55,8 @@ export function GroupPublic(){
                         <Texto>Agendar</Texto>
                     </Agendar>
             </Container3>
+            </PositionScreen>
+
         </>
     );
 }
