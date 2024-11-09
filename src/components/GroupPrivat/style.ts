@@ -129,3 +129,9 @@ export const PositionScreen = styled.View`
     padding: 10px;
 
 `;
+
+export const ButtonVoltar = styled(TouchableOpacity)`
+    background-color: ${({ theme }) => theme.COLORS.STELLBLUE};
+
+`;
+

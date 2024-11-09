@@ -2,11 +2,19 @@ import { Float } from 'react-native/Libraries/Types/CodegenTypes';
 import {TextSelecao, Privat, Value, Texto, Container1, Container2, Container3, Title, SubTitle, Agendar, Preco, Position} from './style'
 import { Text } from 'react-native';
 import { PositionScreen } from './style';
+import { Button, ButtonVoltarPrivat } from '@components/Button';
+import { useNavigation } from '@react-navigation/native';
 type Props = {
     
     title: string;
 }
 export function GroupPrivat(){
+
+    const navigation = useNavigation();
+
+    function handleNewGroup(){
+        navigation.navigate('groupCard');
+   }
     return(
         <>
 
@@ -14,7 +22,7 @@ export function GroupPrivat(){
 
             <Privat>
                 <TextSelecao>
-                    Atendimento Particular    
+                    Atendimento Particular  
                 </TextSelecao>    
             </Privat>
             <Container1>
@@ -81,6 +89,11 @@ export function GroupPrivat(){
                 </Position>
             </Container3>
             </PositionScreen>
+
+            <ButtonVoltarPrivat 
+                title="Voltar"
+                onPress={handleNewGroup}
+            />
 
         </>
     );

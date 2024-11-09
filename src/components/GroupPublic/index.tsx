@@ -2,11 +2,19 @@ import { Float } from 'react-native/Libraries/Types/CodegenTypes';
 import {TextSelecao, Privat, Value, Texto, Container1, Container2, Container3, Title, SubTitle, Agendar, Preco, Position} from './style'
 import { Text } from 'react-native';
 import { PositionScreen } from './style';
+import { Button, ButtonVoltarPublic } from '@components/Button';
+import { useNavigation } from '@react-navigation/native';
 type Props = {
     
     title: string;
 }
 export function GroupPublic(){
+
+    const navigation = useNavigation();
+
+    function handleNewGroup(){
+        navigation.navigate('groupCard');
+   }
     return(
         <>
 
@@ -56,6 +64,11 @@ export function GroupPublic(){
                     </Agendar>
             </Container3>
             </PositionScreen>
+
+            <ButtonVoltarPublic 
+                title="Voltar"
+                onPress={handleNewGroup}
+            />
 
         </>
     );
