@@ -5,7 +5,7 @@ fazer as alterações
 
 git status para ver se tem algo a ser commitado
 
-git add para adicionar
+git add . para adicionar todos os arquivos
 
 git commit -m 'texto do commit'
 
