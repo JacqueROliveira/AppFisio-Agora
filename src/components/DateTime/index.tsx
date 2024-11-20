@@ -9,7 +9,7 @@ import {
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { AlignLeft } from 'phosphor-react-native';
 
-const DatePickerDemo = () => {
+export function DatePickerDemo() {
   const [date, setDate] = useState<Date | null>(null);
   const [showPicker, setShowPicker] = useState(false);
 
@@ -85,5 +85,3 @@ const styles = StyleSheet.create({
     color: '#3E768C',
   },
 });
-
-export default DatePickerDemo;

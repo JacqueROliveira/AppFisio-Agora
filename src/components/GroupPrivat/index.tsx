@@ -1,3 +1,7 @@
+import { useState } from 'react';
+
+
+
 import { Float } from 'react-native/Libraries/Types/CodegenTypes';
 import {TextSelecao, Privat, Value, Texto, Container1, Container2, Container3, Title, SubTitle, Agendar, Preco, Position} from './style'
 import { Text } from 'react-native';
@@ -10,10 +14,12 @@ type Props = {
 }
 export function GroupPrivat(){
 
+    const [anged, setAgendPrivat] = useState('');
+
     const navigation = useNavigation();
 
     function handleNewGroup(){
-        navigation.navigate('groupCard');
+        navigation.navigate('groupCard'); 
    }
    function handleAgendPrivat(){
         navigation.navigate('agendamentoPrivat')
@@ -29,21 +35,23 @@ export function GroupPrivat(){
                 </TextSelecao>    
             </Privat>
             <Container1>
-                <Title>
+                <Title id="name1">
                     Vitória Ramos
                 </Title>
 
-                <SubTitle>
+                <SubTitle id="address1">
                 Av. Interlagos, 705 - Jardim Umuarama, São Paulo - SP
                 </SubTitle>
 
                 <Position>
                     
                     <Preco>
-                        <Value>R$110,00</Value>
+                        <Value id="value">R$110,00</Value>
                     </Preco>
 
-                    <Agendar>
+                    <Agendar
+                    
+                    >
                         <Texto
                          onPress={handleAgendPrivat}
                         >Agendar</Texto>

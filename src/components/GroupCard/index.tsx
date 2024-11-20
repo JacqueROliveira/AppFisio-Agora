@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 
 
 type Props = TouchableOpacityProps & {
-     
+     title: string;
 }
 
 export function GroupCard(){

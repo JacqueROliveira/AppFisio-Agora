@@ -12,7 +12,7 @@ export function Input({ ...rest }: TextInputProps) {
     );
 }
 
-export function Password({...rest}: TextInputProps){
+export function Nome({ ...rest }: TextInputProps) {
     const {COLORS} = useTheme();
     return(
         <Container
@@ -22,7 +22,7 @@ export function Password({...rest}: TextInputProps){
     );
 }
 
-export function Nome({...rest}: TextInputProps){
+export function Password({...rest}: TextInputProps){
     const {COLORS} = useTheme();
     return(
         <Container

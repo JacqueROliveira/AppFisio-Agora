@@ -8,7 +8,7 @@ import {
   FlatList,
 } from 'react-native';
 
-const GenderSelect = () => {
+export function GenderSelect() {
   const [selectedGender, setSelectedGender] = useState<string>('');
   const [showModal, setShowModal] = useState(false);
 
@@ -136,5 +136,3 @@ const styles = StyleSheet.create({
     color: '#3E768C',
   },
 });
-
-export default GenderSelect;

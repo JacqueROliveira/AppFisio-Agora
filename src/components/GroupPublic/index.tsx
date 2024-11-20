@@ -45,11 +45,11 @@ export function GroupPublic(){
 
             <Container2>
             <Title>
-                    Universidade de São Paulo
+                    Universidade de Minas Gerais
                 </Title>
 
                 <SubTitle>
-                    Av, dos Bandeirantes, 4680 - Planalto Paulista, São Paulo - SP
+                    Av. Carandaí, 840 - Funcionários, Belo Horizonte - MG
                 </SubTitle>
                     <Agendar>
                         <Texto
@@ -60,11 +60,11 @@ export function GroupPublic(){
 
             <Container3>
             <Title>
-                    Universidade de São Paulo
+                    Universidade do Paraná
                 </Title>
 
                 <SubTitle>
-                    Av, dos Bandeirantes, 4680 - Planalto Paulista, São Paulo - SP
+                    R. Augusto Stresser, 839 - Juvevê, Curitiba - PR
                 </SubTitle>
                     <Agendar>
                         <Texto

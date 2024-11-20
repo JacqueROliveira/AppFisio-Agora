@@ -4,15 +4,15 @@ import { TouchableOpacity } from 'react-native'
 export const Texto = styled.Text`
     text-align: center;
     font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
-    color: ${({ theme }) => theme.COLORS.STELLBLUE};
+    color: ${({ theme }) => theme.COLORS.GREEN_500};
     font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
 `;
 
 export const SubTitle = styled.Text`
     font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
     color: ${({ theme }) => theme.COLORS.GREEN_500};
-    font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
-    margin-bottom: 12px;
+    font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
+    width: 100%;
 `;
 
 export const Input = styled.Text`
@@ -52,7 +52,7 @@ export const Content = styled.View`
 
 export const TextSelecao = styled.Text`
     font-size: ${({ theme }) => theme.FONT_SIZE.XL}px;
-    color: ${({ theme}) => theme.COLORS.GREEN_700};
+    color: ${({ theme}) => theme.COLORS.GREEN_500};
     font-family: ${({ theme}) => theme.FONT_FAMILY.REGULAR};
 `;
 export const CadastroLogo = styled.Text`
@@ -73,22 +73,20 @@ export const CadastroLogo = styled.Text`
 `;
 
 export const RetornoDados = styled.Text`
-    flex: 1;
-
-    min-height: 20px;
-    max-height: 20px;
-
+   
     background-color: ${({ theme }) => theme.COLORS.WHITE};
-    color: ${({ theme }) => theme.COLORS.STELLBLUE};
+    color: ${({ theme }) => theme.COLORS.GREEN_500};
     font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
     font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
-    border-bottom-color:${({ theme }) => theme.COLORS.GREEN_500} ;
+    
     width: 100%;
-    border-Bottom-Width: 2px;
+    
     border-color: ${({ theme }) => theme.COLORS.GREEN_500};
-    margin-top: 15px;
+    margin-top: 30px;
     padding-bottom: 3px;
     margin-bottom: 10px;
+    flex-direction: column;
+    
 `;
 
 export const Buttom = styled(TouchableOpacity)`
@@ -98,10 +96,54 @@ export const Buttom = styled(TouchableOpacity)`
     max-height: 36px;
     width: 100%;
 
-    background-color: ${({ theme }) => theme.COLORS.STELLBLUE};
+    background-color: ${({ theme }) => theme.COLORS.GREEN_500};
 
     border-radius: 12px;
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
+`;
+
+export const Container1 = styled(TouchableOpacity)`
+    width: 90%;
+    height: 60px;
+    background-color: ${({ theme }) => theme.COLORS.GREEN_500};
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    padding: 10px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+`;
+
+export const Title = styled.Text`
+    font-size: ${({ theme }) => theme.FONT_SIZE.XL}px;
+    color: ${({ theme}) => theme.COLORS.GREEN_500};
+    font-family: ${({ theme}) => theme.FONT_FAMILY.BOLD};
+    flex-direction: column;
+    padding-bottom: 10px;
+`;
+export const Position = styled.View`
+    flex-direction: column;
+`;
+
+export const Preco = styled.Text`
+    background-color: ${({ theme }) => theme.COLORS.GREEN_500};
+    color: ${({ theme }) => theme.COLORS.WHITE};
+    border-radius: 12px;
+    margin-right: 15px;
+    padding: 6px;
+    font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
+    font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
+    border-color: ${({ theme }) => theme.COLORS.GREEN_500};
+    border-width:2px;
+    width: 30%;
+    height: 15´x;
+    text-align: center;
+`;
+export const Value = styled.Text`
+    text-align: center;
+    font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
+    color: ${({ theme }) => theme.COLORS.WHITE};
+    font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
 `;
