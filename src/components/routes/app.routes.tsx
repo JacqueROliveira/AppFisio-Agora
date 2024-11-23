@@ -8,7 +8,7 @@ import { ConfirmacaoPrivat } from '@components/ConfirmacaoPrivat';
 import { ConfirmacaoPublic } from '@components/ConfirmacaoPublic';
 import { AgendamentoPrivat } from '@components/AgendamentoPrivat';
 import { AgendamentoPublic } from '@components/AgendamentoPublic';
-
+import { DadosCadastrais } from '@components/DadosCadastrais';
 
 const {Navigator, Screen} = createNativeStackNavigator();
 
@@ -50,6 +50,10 @@ export function AppRoutes(){
              <Screen
             name="agendamentoPublic"
             component={AgendamentoPublic}
+            />
+             <Screen
+            name="dadosCadastrais"
+            component={DadosCadastrais}
             />
 
         </Navigator>

@@ -11,6 +11,7 @@ export declare global {
             confirmacaoPublic: undefined
             agendamentoPrivat: undefined
             agendamentoPublic: undefined
+            dadosCadastrais: undefined
         }
     }
 }
