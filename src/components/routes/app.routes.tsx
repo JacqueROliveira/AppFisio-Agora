@@ -8,11 +8,7 @@ import { ConfirmacaoPrivat } from '@components/ConfirmacaoPrivat';
 import { ConfirmacaoPublic } from '@components/ConfirmacaoPublic';
 import { AgendamentoPrivat } from '@components/AgendamentoPrivat';
 import { AgendamentoPublic } from '@components/AgendamentoPublic';
-<<<<<<< HEAD
 import { DadosCadastrais } from '@components/DadosCadastrais';
-=======
-
->>>>>>> caf67b2822f678fb4f997902c8f0f078d175c108
 
 const {Navigator, Screen} = createNativeStackNavigator();
 
@@ -55,13 +51,10 @@ export function AppRoutes(){
             name="agendamentoPublic"
             component={AgendamentoPublic}
             />
-<<<<<<< HEAD
              <Screen
             name="dadosCadastrais"
             component={DadosCadastrais}
             />
-=======
->>>>>>> caf67b2822f678fb4f997902c8f0f078d175c108
 
         </Navigator>
     );

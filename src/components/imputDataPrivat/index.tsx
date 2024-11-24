@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-<<<<<<< HEAD
-=======
-import { ButtonCadastro } from '@components/Button';
-import logoimg from 'assets/Logo-letra.png'
-import { Data, Nome, SobreNome } from '@components/Input';
->>>>>>> caf67b2822f678fb4f997902c8f0f078d175c108
 
 
 const ImputDataPrivat = () => {
@@ -16,11 +10,7 @@ const ImputDataPrivat = () => {
 
   // Opções de data e horário
   const dateOptions = ['23/09/2024', '24/09/2024'];
-<<<<<<< HEAD
   const timeOptions = ['15:00 - 16:00', '20:00 - 21:00', '21:00 - 22:00'];
-=======
-  const timeOptions = ['18:00 - 19:00', '20:00 - 21:00', '21:00 - 22:00'];
->>>>>>> caf67b2822f678fb4f997902c8f0f078d175c108
 
   const handleDatePress = () => {
     setShowDateOptions(!showDateOptions);
