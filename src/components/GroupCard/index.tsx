@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import {Logo, Container1, Container2, Icon, Title, SubTitle, Container, Container3, TitleCadastral} from './styles'
+=======
+import {Logo, Container1, Container2, Icon, Title, SubTitle, Container} from './styles'
+>>>>>>> caf67b2822f678fb4f997902c8f0f078d175c108
 import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
 import logoimg from 'assets/Logo-letra.png'
 import { useNavigation } from '@react-navigation/native';
@@ -19,18 +23,25 @@ export function GroupCard(){
     navigation.navigate('groupPublic');
     }
 
+<<<<<<< HEAD
     function handleDadosCadastrais(){
         navigation.navigate('dadosCadastrais');
         }
 
 
+=======
+>>>>>>> caf67b2822f678fb4f997902c8f0f078d175c108
     return(
         <>
            <Container>
             <Logo source={logoimg}/>
             
             <SubTitle>
+<<<<<<< HEAD
             Escolha a modalidade: 
+=======
+            Escolha a modalidade de Atendimento: 
+>>>>>>> caf67b2822f678fb4f997902c8f0f078d175c108
             </SubTitle>
             <Container1 >
                 <Title

@@ -27,7 +27,11 @@ export const ClicHere = styled(TouchableOpacity)`
 export const Container = styled.View`
     flex: 1;
     background-color: ${({ theme }) => theme.COLORS.WHITE};
+<<<<<<< HEAD
     padding: 10px 24px;
+=======
+    padding: 0px 24px;
+>>>>>>> caf67b2822f678fb4f997902c8f0f078d175c108
     align-items: center;
     justify-content: flex-start;
 `;

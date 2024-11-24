@@ -8,7 +8,11 @@ import {
   Platform
 } from 'react-native';
 
+<<<<<<< HEAD
 export function TextAreaInput(){
+=======
+const TextAreaInput = () => {
+>>>>>>> caf67b2822f678fb4f997902c8f0f078d175c108
   const [text, setText] = useState('');
 
   const handleChange = (value) => {
@@ -103,4 +107,10 @@ const styles = StyleSheet.create({
     shadowRadius: 1.41,
     elevation: 2, // para Android
   },
+<<<<<<< HEAD
 });
+=======
+});
+
+export default TextAreaInput;
+>>>>>>> caf67b2822f678fb4f997902c8f0f078d175c108
