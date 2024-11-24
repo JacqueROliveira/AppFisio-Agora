@@ -35,9 +35,10 @@ export const ClicHere = styled(TouchableOpacity)`
 export const Container = styled.View`
     flex: 1;
     background-color: ${({ theme }) => theme.COLORS.WHITE};
-    padding: 0px 24px;
+    padding: 10px 24px;
     align-items: center;
     justify-content: flex-start;
+    
 `;
 export const FixaCadastro = styled.View`
     flex: 1;
