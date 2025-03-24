@@ -1,4 +1,4 @@
-import {Container, SubTitle, TextSelecao, CadastroLogo,  FixaCadastro, Logo, RetornoDados, Container1, Title, Position, Preco, Value} from './style'
+import {Container, SubTitle, TextSelecao, CadastroLogo, Logo, Title, Position, Preco, Value} from './style'
 import logoimg from 'assets/Logo-letra.png'
 import { ButtonCadastro } from '@components/Button';
 import ImputDataPrivat from '@components/imputDataPrivat';
