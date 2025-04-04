@@ -1,4 +1,4 @@
-import { TouchableOpacityProps, View} from 'react-native'
+import { TouchableOpacityProps, View } from 'react-native'
 import { ClickHere, StyledText, Container, Title, SubTitle } from './styles'
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -11,54 +11,54 @@ type Props = TouchableOpacityProps & {
 }
 
 
-export function Button({ title, type= 'PRIMARY', ...rest}:Props ){
-    return(
+export function Button({ title, type = 'PRIMARY', ...rest }: Props) {
+    return (
         <>
-        <Container 
-        type={type}
-        {...rest}>
-            <Title>
-                {title}
-            </Title>
-        </Container>
+            <Container
+                type={type}
+                {...rest}>
+                <Title>
+                    {title}
+                </Title>
+            </Container>
         </>
     );
 }
 /* este atributo foi feito para ser usado principalmente na tela do Login */
-export function ButtonCadastro({title, type= 'PRIMARY', ...rest}:Props ){
-    return(
+export function ButtonCadastro({ title, type = 'PRIMARY', ...rest }: Props) {
+    return (
 
-    <Container 
-        type={type}
-        {...rest}>
+        <Container
+            type={type}
+            {...rest}>
             <Title>
                 {title}
             </Title>
         </Container>
     );
 }
-export function ButtonVoltarPublic({title, type= 'PRIMARY',...rest}:Props ){
-    return(
-        
-        <Container 
+export function ButtonVoltarPublic({ title, type = 'PRIMARY', ...rest }: Props) {
+    return (
+
+        <Container
             type={type}
             {...rest}>
-                <Title>
-                    {title}
-                </Title>
-            </Container>
-        
+            <Title>
+                {title}
+            </Title>
+        </Container>
+
     );
 }
-    export function ButtonVoltarPrivat({title, type= 'SECONDARY',...rest}:Props ){
-        return(
-    
-        <Container 
+export function ButtonVoltarPrivat({ title, type = 'SECONDARY', ...rest }: Props) {
+    return (
+
+        <Container
             type={type}
             {...rest}>
-                <Title>
-                    {title}
-                </Title>
-            </Container>
-        );
+            <Title>
+                {title}
+            </Title>
+        </Container>
+    );
 }
