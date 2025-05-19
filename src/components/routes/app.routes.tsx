@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Groups from '@screens/Groups';
-import { Cadastro} from '@components/Cadastro';
+import { Index } from '@components/Cadastro/Index';
 import { GroupCard } from '@components/GroupCard';
 import { GroupPrivat } from '@components/GroupPrivat';
 import { GroupPublic } from '@components/GroupPublic';
@@ -9,11 +9,16 @@ import { ConfirmacaoPublic } from '@components/ConfirmacaoPublic';
 import { AgendamentoPrivat } from '@components/AgendamentoPrivat';
 import { AgendamentoPublic } from '@components/AgendamentoPublic';
 import { DadosCadastrais } from '@components/DadosCadastrais';
+import { SQLiteProvider } from 'expo-sqlite';
+import { initializeDatabase } from 'src/dataBase/initializeDatabase';
+
+
 
 const {Navigator, Screen} = createNativeStackNavigator();
 
 export function AppRoutes(){
     return(
+        <SQLiteProvider databaseName="myDatabase.db" onInit={initializeDatabase}>
         <Navigator screenOptions={{ headerShown: false}}>
             <Screen
             name="groups"
@@ -21,7 +26,7 @@ export function AppRoutes(){
             />
             <Screen
             name="cadastro"
-            component={Cadastro}
+            component={Index}
             />
              <Screen
             name="groupCard"
@@ -57,6 +62,7 @@ export function AppRoutes(){
             />
 
         </Navigator>
+        </SQLiteProvider>
     );
 }
 

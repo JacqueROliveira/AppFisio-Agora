@@ -11,6 +11,9 @@
       "@components/*":[
         "./src/components/*"
       ],
+       "@dataBase/*":[
+        "./src/dataBase/*"
+      ],
       "@routes/*":[
         "./src/routes/*"
       ],

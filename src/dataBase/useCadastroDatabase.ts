@@ -1,8 +1,7 @@
-import { DateTimePickerEvent } from "@react-native-community/datetimepicker"
 import { useSQLiteContext } from "expo-sqlite"
 
 
-export type CadastroDatabase ={
+export type CadastroDatabase = {
     id: number
     nome: string
     sobrenome: string
@@ -10,7 +9,7 @@ export type CadastroDatabase ={
     genero: string
     cidade: string
     uf: string
-    telefone: number
+    telefone: string
     email: string
     senha: string
     dor: string
@@ -21,15 +20,13 @@ export type CadastroDatabase ={
 
 
 export function useCadastroDatabase(){
-
     const database = useSQLiteContext()
 
-
     async function create(data: Omit<CadastroDatabase, "id">) {
-
         const statement = await database.prepareAsync(
-            "INSERT INTO paciente (nome, sobrenome, nascimento, genero, cidade, uf, telefone, email, senha, dor, doenca, cirurgico, esporte) VALUES ($nome, $sobrenome, $nascimento, $genero, $cidade, $uf, $telefone, $email, $senha, $dor, $doenca, $cirurgico, $esporte)"
+            "INSERT INTO patient (nome, sobrenome, nascimento, genero, cidade, uf, telefone, email, senha, dor, doenca, cirurgico, esporte) VALUES ($nome, $sobrenome, $nascimento, $genero, $cidade, $uf, $telefone, $email, $senha, $dor, $doenca, $cirurgico, $esporte)"
         )
+
         try {
             const result = await statement.executeAsync({
                 $nome: data.nome,
@@ -44,15 +41,71 @@ export function useCadastroDatabase(){
                 $dor: data.dor,
                 $doenca: data.doenca,
                 $cirurgico: data.cirurgico,
-                $esporte: data.esporte
+                $esporte: data.esporte,
             })
 
-            const inserteRowId = result.lastInsertRowId.toLocaleString()
-            return { inserteRowId}
+            const insertedRowId = result.lastInsertRowId.toLocaleString()
+            return { insertedRowId }
         } catch (error) {
             throw error
+        } finally {
+            await statement.finalizeAsync()
         }
     }
+  async function searchByName(nome: string) {
+    try {
+      const query = "SELECT * FROM patient WHERE nome LIKE ?"
 
-    return { create }
+      const response = await database.getAllAsync<CadastroDatabase>(
+        query,
+        `%${nome}%`
+      )
+
+      return response
+    } catch (error) {
+      throw error
+    }
+  }
+
+  async function update(data: CadastroDatabase) {
+    const statement = await database.prepareAsync(
+      "UPDATE patient SET nome = $nome, senha = $senha WHERE id = $id"
+    )
+
+    try {
+      await statement.executeAsync({
+        $id: data.id,
+        $nome: data.nome,
+        $senha: data.senha,
+      })
+    } catch (error) {
+      throw error
+    } finally {
+      await statement.finalizeAsync()
+    }
+  }
+
+  async function remove(id: number) {
+    try {
+      await database.execAsync("DELETE FROM patient WHERE id = " + id)
+    } catch (error) {
+      throw error
+    }
+  }
+
+  async function show(id: number) {
+    try {
+      const query = "SELECT * FROM patient WHERE id = ?"
+
+      const response = await database.getFirstAsync<CadastroDatabase>(query, [
+        id,
+      ])
+
+      return response
+    } catch (error) {
+      throw error
+    }
+  }
+
+  return { create, searchByName, update, remove, show }
 }

@@ -62,3 +62,15 @@ export function ButtonVoltarPublic({title, type= 'PRIMARY',...rest}:Props ){
             </Container>
         );
 }
+export function ButtonSave({title, type= 'PRIMARY', ...rest}:Props ){
+    return(
+
+    <Container 
+        type={type}
+        {...rest}>
+            <Title>
+                {title}
+            </Title>
+        </Container>
+    );
+}
