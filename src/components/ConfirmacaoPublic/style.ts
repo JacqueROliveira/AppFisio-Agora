@@ -7,7 +7,6 @@ export const Texto = styled.Text`
     color: ${({ theme }) => theme.COLORS.GREEN_500};
     font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
     margin-top: 20px;
-
 `;
 export const DiaHorario = styled.Text`
  text-align: center;
@@ -22,16 +21,13 @@ export const SubTitle = styled.Text`
     font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
     width: 100%;
 `;
-
 export const Input = styled.Text`
     width: 100%;
     text-decoration: underline;
 `;
-
 export const ClicHere = styled(TouchableOpacity)`
     border-color: ${({ theme }) => theme.COLORS.GREEN_500} ;
 `;
-
 export const Container = styled.View`
     flex: 1;
     background-color: ${({ theme }) => theme.COLORS.WHITE};
@@ -53,12 +49,10 @@ export const Logo = styled.Image`
     align-items: center;
     margin-top: 150px;
 `;
-
 export const Content = styled.View`
     flex:1;
     justify-content: center;
 `;
-
 export const TextSelecao = styled.Text`
     font-size: ${({ theme }) => theme.FONT_SIZE.XL}px;
     color: ${({ theme}) => theme.COLORS.WHITE};
@@ -86,26 +80,19 @@ export const RetornoDados = styled.Text`
     color: ${({ theme }) => theme.COLORS.GREEN_500};
     font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
     font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
-    
     width: 100%;
-    
     border-color: ${({ theme }) => theme.COLORS.GREEN_500};
     margin-top: 30px;
     padding-bottom: 3px;
     margin-bottom: 10px;
     flex-direction: column;
-    
 `;
-
 export const Buttom = styled(TouchableOpacity)`
     flex: 1;
-
     min-height: 36px;
     max-height: 36px;
     width: 100%;
-
     background-color: ${({ theme }) => theme.COLORS.GREEN_500};
-
     border-radius: 12px;
     justify-content: center;
     align-items: center;

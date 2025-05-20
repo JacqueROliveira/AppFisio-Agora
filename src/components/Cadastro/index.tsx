@@ -11,6 +11,12 @@ import { ButtonCadastro, ButtonSave } from '@components/Button';
 
 import {  useCadastroDatabase,  CadastroDatabase,} from "@dataBase/useCadastroDatabase"
 
+import { Container, TextSelecao, CadastroLogo, FixaCadastro, Logo } from './style'
+import { ScrollView } from 'react-native';
+import logoimg from 'assets/Logo-letra.png'
+import { ButtonCadastro } from '@components/Button';
+import { useState } from 'react';
+import { SobreNome } from '@components/Input/index'
 import { useNavigation } from '@react-navigation/native';
 import uuid from 'react-native-uuid'
 

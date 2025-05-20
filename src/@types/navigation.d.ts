@@ -12,6 +12,7 @@ export declare global {
             agendamentoPrivat: undefined
             agendamentoPublic: undefined
             dadosCadastrais: undefined
+            testeTela2: undefined
         }
     }
 }

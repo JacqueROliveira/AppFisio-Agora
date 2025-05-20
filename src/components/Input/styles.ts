@@ -3,10 +3,8 @@ import styled from "styled-components/native";
 
 export const Container = styled(TextInput)`
     flex: 1;
-
     min-height: 20px;
     max-height: 20px;
-
     background-color: ${({ theme }) => theme.COLORS.WHITE};
     color: ${({ theme }) => theme.COLORS.STELLBLUE};
     font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
@@ -19,13 +17,10 @@ export const Container = styled(TextInput)`
     padding-bottom: 3px;
     margin-bottom: 10px;
 `;
-
 export const DadosInputText = styled(TextInput)`
     flex: 1;
-
     min-height: 20px;
     max-height: 20px;
-
     background-color: ${({ theme }) => theme.COLORS.WHITE};
     color: ${({ theme }) => theme.COLORS.STELLBLUE};
     font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
@@ -37,7 +32,6 @@ export const DadosInputText = styled(TextInput)`
     border-color: ${({ theme }) => theme.COLORS.STELLBLUE};
     margin-bottom: 25px;
 `;
-
 export const Position = styled(TextInput)`
     flex-direction: row;
 `;

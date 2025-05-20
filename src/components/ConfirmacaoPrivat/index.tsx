@@ -1,72 +1,97 @@
 import { Float } from 'react-native/Libraries/Types/CodegenTypes';
-import { Container, Title, SubTitle, Position, TextSelecao, CadastroLogo, Preco, Value, Texto, DiaHorario, Logo} from './style'
-import { useTheme} from 'styled-components/native'
+import { Container, Title, SubTitle, Position, TextSelecao, CadastroLogo, Preco, Value, Texto, DiaHorario, Logo } from './style'
+import { useTheme } from 'styled-components/native'
 import Svg, { Line } from 'react-native-svg';
 import logoimg from 'assets/Logo-letra.png'
 import { Button, ButtonVoltarPrivat } from '@components/Button';
 import { useNavigation } from '@react-navigation/native';
+import { RouteProp, useRoute, NavigationProp } from '@react-navigation/native';
 
 
-export function ConfirmacaoPrivat(){
-    const {COLORS} = useTheme();
+export function ConfirmacaoPrivat() {
+    const { COLORS } = useTheme();
 
     const navigation = useNavigation();
 
-    function handleNewGroup(){
-        navigation.navigate('groups'); 
-   }
+    function handleNewGroup() {
+        navigation.navigate('groups');
+    }
+    type RootStackParamList = {
+        agendamentoPrivat: {
+            nome: string;
+            endereco: string;
+            preco: string;
+            data: string;
+            horario: string;
+        },
+        confirmacaoPrivat: {
+            nome: string;
+            endereco: string;
+            preco: string;
+            data: string;
+            horario: string;
+        };
+    };
+    type AgendamentoPrivatRouteProp = RouteProp<RootStackParamList, 'agendamentoPrivat'>;
 
-    return(
-       <Container>
+    type NavigationProps = NavigationProp<RootStackParamList>;
+
+    const route = useRoute<AgendamentoPrivatRouteProp>();
+
+    // Extrair os parâmetros
+    const { nome, endereco, preco, data, horario } = route.params;
+
+    return (
+        <Container>
             <CadastroLogo>
                 <TextSelecao>
                     AGENDAMENTO CONCLUIDO!
                 </TextSelecao>
             </CadastroLogo>
 
-            <Position>       
-          
+            <Position>
+
                 <Title>
-                    Vitória Ramos
+                    {nome}
                 </Title>
 
                 <SubTitle>
-                    Av. Interlagos, 705 - Jardim Umuarama, São Paulo - SP
+                    {endereco}
                 </SubTitle>
                 <Preco>
-                    <Value id="value">R$110,00</Value>
+                    <Value>{preco}</Value>
                 </Preco>
             </Position>
             <Svg height={30} width="100%">
-                    <Line 
-                        x1="0%"
-                        y1="50%"
-                        x2="100%"
-                        y2="50%"
+                <Line
+                    x1="0%"
+                    y1="50%"
+                    x2="100%"
+                    y2="50%"
                     stroke={COLORS.STELLBLUE}
-                    />
-             </Svg>
-            
+                />
+            </Svg>
+
             <Texto>
                 Dia:
             </Texto>
             <DiaHorario>
-                24/09/2024
+                {data}
             </DiaHorario>
 
             <Texto>
                 HORÁRIO:
             </Texto>
             <DiaHorario>
-                15:00 - 16:00
+                {horario}
             </DiaHorario>
 
-            <Logo source={logoimg}/>
-            <ButtonVoltarPrivat 
+            <Logo source={logoimg} />
+            <ButtonVoltarPrivat
                 title="Inicio"
                 onPress={handleNewGroup}
             />
-       </Container>
-       
+        </Container>
+
     );
 }
