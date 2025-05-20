@@ -2,7 +2,7 @@
 
 ## Fisio-Agora  
 
-# Grupo 03  
+Grupo 03  
 
 **Integrantes:**  
 - Jacqueline Rodrigues Oliveira  
