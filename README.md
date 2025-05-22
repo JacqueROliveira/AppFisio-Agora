@@ -2,10 +2,6 @@
 
 ## Fisio-Agora  
 
-### PROJETO INTEGRADOR: ANÁLISE DE SOLUÇÕES INTEGRADAS PARA ORGANIZAÇÕES  
-
-## Fisio-Agora  
-
 ## 👨‍💻 Desenvolvido por
 
 Grupo 03 — Projeto Integrador 2 
