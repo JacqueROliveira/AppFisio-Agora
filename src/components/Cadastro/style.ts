@@ -51,6 +51,11 @@ export const Content = styled.View`
     justify-content: center;
 `;
 
+export const Flatlist = styled.View`
+    flex:1;
+    justify-content: center;
+`;
+
 export const TextSelecao = styled.Text`
     font-size: ${({ theme }) => theme.FONT_SIZE.XL}px;
     color: ${({ theme}) => theme.COLORS.STELLBLUE};

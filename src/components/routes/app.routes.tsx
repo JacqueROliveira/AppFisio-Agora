@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Groups from '@screens/Groups';
-import { Index } from '@components/Cadastro/Index';
+import { Index } from '@components/Cadastro/index';
 import { GroupCard } from '@components/GroupCard';
 import { GroupPrivat } from '@components/GroupPrivat';
 import { GroupPublic } from '@components/GroupPublic';
@@ -8,25 +8,46 @@ import { ConfirmacaoPrivat } from '@components/ConfirmacaoPrivat';
 import { ConfirmacaoPublic } from '@components/ConfirmacaoPublic';
 import { AgendamentoPrivat } from '@components/AgendamentoPrivat';
 import { AgendamentoPublic } from '@components/AgendamentoPublic';
-import { DadosCadastrais } from '@components/DadosCadastrais';
-import { SQLiteProvider } from 'expo-sqlite';
-import { initializeDatabase } from 'src/dataBase/initializeDatabase';
+import { EditCadastros } from '@components/EdicaoCadastro/EditCadastro';
+import { LoginScreen } from '@components/Login';
 
-
+export type RootStackParamList = {
+    login: undefined;
+    cadastro: undefined;
+    groups: undefined;
+    edicaoCadastro: undefined; 
+    groupCard: undefined;
+    groupPrivat: undefined;
+    groupPublic: undefined;
+    confirmacaoPrivat: undefined;
+    confirmacaoPublic: undefined;
+    agendamentoPrivat: undefined;
+    agendamentoPublic: undefined;
+};
 
 const {Navigator, Screen} = createNativeStackNavigator();
 
 export function AppRoutes(){
     return(
-        <SQLiteProvider databaseName="myDatabase.db" onInit={initializeDatabase}>
+        
+            
         <Navigator screenOptions={{ headerShown: false}}>
+            
             <Screen
-            name="groups"
-            component={Groups}
+            name="login"
+            component={LoginScreen}
             />
             <Screen
             name="cadastro"
             component={Index}
+            />
+            <Screen
+            name="groups"
+            component={Groups}
+            />
+              <Screen
+            name="edicaoCadastro"
+            component={EditCadastros}
             />
              <Screen
             name="groupCard"
@@ -56,13 +77,10 @@ export function AppRoutes(){
             name="agendamentoPublic"
             component={AgendamentoPublic}
             />
-             <Screen
-            name="dadosCadastrais"
-            component={DadosCadastrais}
-            />
+           
 
         </Navigator>
-        </SQLiteProvider>
+       
     );
 }
 

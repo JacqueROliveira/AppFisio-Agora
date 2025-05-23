@@ -1,7 +1,5 @@
 import { TouchableOpacityProps, View } from 'react-native'
 import { ClickHere, StyledText, Container, Title, SubTitle } from './styles'
-import { TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 
 export type ButtonTypeStyleProps = 'PRIMARY' | 'SECONDARY';
 
@@ -74,3 +72,16 @@ export function ButtonSave({title, type= 'PRIMARY', ...rest}:Props ){
         </Container>
     );
 }
+export function ButtonVoltarcadastro({ title, type = 'SECONDARY', ...rest }: Props) {
+    return (
+
+        <Container
+            type={type}
+            {...rest}>
+                <Title>
+                    {title}
+                </Title>
+            </Container>
+        );
+}
+

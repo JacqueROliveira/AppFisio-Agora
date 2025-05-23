@@ -1,4 +1,5 @@
 import { useSQLiteContext } from "expo-sqlite"
+import { useState } from "react"
 
 
 export type CadastroDatabase = {
@@ -20,7 +21,8 @@ export type CadastroDatabase = {
 
 
 export function useCadastroDatabase(){
-    const database = useSQLiteContext()
+    const database = useSQLiteContext();
+    const [loggedUser, setLoggedUser] = useState<CadastroDatabase | null>(null)
 
     async function create(data: Omit<CadastroDatabase, "id">) {
         const statement = await database.prepareAsync(
@@ -52,13 +54,14 @@ export function useCadastroDatabase(){
             await statement.finalizeAsync()
         }
     }
-  async function searchByName(nome: string) {
+  async function searchByName(email: string, senha: string) {
     try {
-      const query = "SELECT * FROM patient WHERE nome LIKE ?"
+      const query = "SELECT * FROM patient WHERE email LIKE ?"
 
       const response = await database.getAllAsync<CadastroDatabase>(
         query,
-        `%${nome}%`
+        `%${email}%`,
+        `%${senha}%`
       )
 
       return response
@@ -74,9 +77,20 @@ export function useCadastroDatabase(){
 
     try {
       await statement.executeAsync({
-        $id: data.id,
-        $nome: data.nome,
-        $senha: data.senha,
+                $id: data.id,
+                $nome: data.nome,
+                $sobrenome: data.sobrenome,
+                $nascimento: data.nascimento,
+                $genero: data.genero,
+                $cidade: data.cidade,
+                $uf: data.uf,
+                $telefone: data.telefone,
+                $email: data.email,
+                $senha: data.senha,
+                $dor: data.dor,
+                $doenca: data.doenca,
+                $cirurgico: data.cirurgico,
+                $esporte: data.esporte,
       })
     } catch (error) {
       throw error
@@ -107,5 +121,31 @@ export function useCadastroDatabase(){
     }
   }
 
-  return { create, searchByName, update, remove, show }
+  async function authUser(email: string, senha: string): Promise<CadastroDatabase | null> {
+    try {
+      const query = "SELECT * FROM patient WHERE email = ? AND senha = ?";
+
+      const response = await database.getFirstAsync<CadastroDatabase>(query, [
+        email,
+        senha,
+      ]);
+
+      if (response) {
+        setLoggedUser(response)
+      } else {  
+        setLoggedUser(null); 
+      }
+      return response ;
+    } catch (error) {
+      console.error("Erro ao autenticar usuário:", error) 
+      throw error
+    }
+  }
+
+
+
+  return { create, searchByName, update ,remove, show, authUser }
 }
+
+
+

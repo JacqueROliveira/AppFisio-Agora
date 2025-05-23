@@ -1,16 +1,24 @@
-import { Logo, Container1, Container2, Icon, Title, SubTitle, Container, Container3, TitleCadastral } from './styles'
-import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
+import { Logo, Container1, Container2, Title, SubTitle, Container, Container3 } from './styles'
+import { TouchableOpacityProps } from 'react-native';
 import logoimg from 'assets/Logo-letra.png'
 import { useNavigation } from '@react-navigation/native';
-
+import { useUser } from 'src/contexts/UserContext';
+import type { RootStackParamList } from '@components/routes/app.routes';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 type Props = TouchableOpacityProps & {
     title: string;
 }
 
+type GroupCardScreenNavigationProp = NativeStackNavigationProp<
+  RootStackParamList, 
+  'groupCard' 
+>;
+
 export function GroupCard() {
 
-    const navigation = useNavigation();
+    const { user } = useUser();
+    const navigation = useNavigation<GroupCardScreenNavigationProp>();
 
     function handleNewGroup() {
         navigation.navigate('groupPrivat');
@@ -18,11 +26,9 @@ export function GroupCard() {
     function handleNewGroup2() {
         navigation.navigate('groupPublic');
     }
-
-    function handleDadosCadastrais() {
-        navigation.navigate('dadosCadastrais');
+    function handleUpdateCadastro() {
+        navigation.navigate('edicaoCadastro');
     }
-
 
     return (
         <>
@@ -47,6 +53,17 @@ export function GroupCard() {
                         Atendimento Em Faculdade
                     </Title>
                 </Container2>
+
+                 <Container3 >
+                    <Title
+                        onPress={handleUpdateCadastro}
+                    >
+                        Editar meu cadastro
+                    </Title>
+                </Container3>
+
+              
+                
             </Container>
         </>
     );

@@ -14,10 +14,10 @@ export function Patient({ data, onDelete, onOpen, ...rest }: Props) {
   return (
     <Pressable
       style={{
-        backgroundColor: "#CECECE",
-        padding: 24,
+        backgroundColor: "#00FF00",
+        padding: 4,
         borderRadius: 5,
-        gap: 12,
+        gap: 10,
         flexDirection: "row",
       }}
       {...rest}
@@ -27,11 +27,11 @@ export function Patient({ data, onDelete, onOpen, ...rest }: Props) {
       </Text>
 
       <TouchableOpacity onPress={onDelete}>
-        <MaterialIcons nome="delete" size={24} color="red" />
+        <MaterialIcons name="delete" size={24} color="red" />
       </TouchableOpacity>
 
       <TouchableOpacity onPress={onOpen}>
-        <MaterialIcons nome="visibility" size={24} color="blue" />
+        <MaterialIcons name="visibility" size={24} color="blue" />
       </TouchableOpacity>
     </Pressable>
   )
