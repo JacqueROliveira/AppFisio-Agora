@@ -10,7 +10,7 @@ export const Texto = styled.Text`
 
 export const SubTitle = styled.Text`
         font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
-        color: ${({ theme }) => theme.COLORS.GREEN_500};
+        color: ${({ theme }) => theme.COLORS.Azul};
         font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
         width: 100%;
     `;
@@ -26,6 +26,7 @@ export const ClicHere = styled(TouchableOpacity)`
 
 export const Container = styled.View`
         flex: 1;
+        margin-top: 20px;
         background-color: ${({ theme }) => theme.COLORS.WHITE};
         padding: 10px 24px;
         align-items: center;
@@ -52,15 +53,15 @@ export const Content = styled.View`
 
 export const TextSelecao = styled.Text`
         font-size: ${({ theme }) => theme.FONT_SIZE.XL}px;
-        color: ${({ theme }) => theme.COLORS.GREEN_500};
-        font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
+        color: ${({ theme }) => theme.COLORS.Laranja};
+        font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
     `;
 export const CadastroLogo = styled.Text`
         width: 70%;
         height: 50px;
         background-color: ${({ theme }) => theme.COLORS.WHITE};
         border: 5px;
-        border-color: ${({ theme }) => theme.COLORS.GREEN_500};
+        border-color: ${({ theme }) => theme.COLORS.Laranja};
         align-items: center;
         justify-content: center;
         border-radius: 50px;
@@ -101,7 +102,7 @@ export const Buttom = styled(TouchableOpacity)`
 export const Container1 = styled(TouchableOpacity)`
         width: 90%;
         height: 60px;
-        background-color: ${({ theme }) => theme.COLORS.GREEN_500};
+        background-color: ${({ theme }) => theme.COLORS.Azul};
         align-items: center;
         justify-content: center;
         border-radius: 50px;
@@ -112,7 +113,7 @@ export const Container1 = styled(TouchableOpacity)`
 
 export const Title = styled.Text`
         font-size: ${({ theme }) => theme.FONT_SIZE.XL}px;
-        color: ${({ theme }) => theme.COLORS.GREEN_500};
+        color: ${({ theme }) => theme.COLORS.Azul};
         font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
         flex-direction: column;
         padding-bottom: 10px;
@@ -122,14 +123,14 @@ export const Position = styled.View`
     `;
 
 export const Preco = styled.Text`
-        background-color: ${({ theme }) => theme.COLORS.GREEN_500};
+        background-color: ${({ theme }) => theme.COLORS.Azul};
         color: ${({ theme }) => theme.COLORS.WHITE};
         border-radius: 12px;
         margin-right: 15px;
         padding: 6px;
         font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
         font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
-        border-color: ${({ theme }) => theme.COLORS.GREEN_500};
+        border-color: ${({ theme }) => theme.COLORS.Azul};
         border-width:2px;
         width: 30%;
         height: 15´x;

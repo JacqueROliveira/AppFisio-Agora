@@ -4,7 +4,7 @@ import styled from 'styled-components/native'
 export const Container1 = styled(TouchableOpacity)`
     width: 90%;
     height: 60px;
-    background-color: ${({ theme }) => theme.COLORS.STELLBLUE};
+    background-color: ${({ theme }) => theme.COLORS.Azul};
     align-items: center;
     justify-content: center;
     border-radius: 50px;
@@ -15,7 +15,7 @@ export const Container1 = styled(TouchableOpacity)`
 export const Container2 = styled(TouchableOpacity)`
     width: 90%;
     height: 60px;
-    background-color: ${({ theme }) => theme.COLORS.GREEN_500};
+    background-color: ${({ theme }) => theme.COLORS.Azul};
     align-items: center;
     justify-content: center;
     border-radius: 50px;
@@ -27,7 +27,7 @@ export const Container3 = styled(TouchableOpacity)`
     
     width: 90%;
     height: 60px;
-    background-color: ${({ theme }) => theme.COLORS.GREEN_500};
+    background-color: ${({ theme }) => theme.COLORS.Azul};
     align-items: center;
     justify-content: center;
     border-radius: 50px;
@@ -43,12 +43,12 @@ export const Title = styled.Text`
 `;
 export const TitleCadastral = styled.Text`
     font-size: ${({ theme }) => theme.FONT_SIZE.XL}px;
-    color: ${({ theme}) => theme.COLORS.GREEN_500};
+    color: ${({ theme}) => theme.COLORS.Azul};
     font-family: ${({ theme}) => theme.FONT_FAMILY.REGULAR};
 `;
 export const SubTitle = styled.Text`
     font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
-    color: ${({ theme }) => theme.COLORS.STELLBLUE};
+    color: ${({ theme }) => theme.COLORS.Laranja};
     font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
     margin-bottom: 40px;
     text-align: center;
@@ -63,6 +63,8 @@ export const Logo = styled.Image`
     height: 200px;
 `;
 export const Container = styled.View`
+    
+    margin-top: 20px;
     width: 100%;
     flex-direction: column ;
     align-items: center;

@@ -4,13 +4,13 @@ import { TouchableOpacity } from 'react-native'
 export const Texto = styled.Text`
     text-align: center;
     font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
-    color: ${({ theme }) => theme.COLORS.STELLBLUE};
+    color: ${({ theme }) => theme.COLORS.Laranja};
     font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
 `;
 
 export const SubTitle = styled.Text`
     font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
-    color: ${({ theme }) => theme.COLORS.GREEN_500};
+    color: ${({ theme }) => theme.COLORS.Azul};
     font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
     margin-bottom: 12px;
     width: 110%;
@@ -24,7 +24,7 @@ export const ImputLogin = styled.Text`
 `;
 
 export const ClicHere = styled(TouchableOpacity)`
-    border-color: ${({ theme }) => theme.COLORS.GREEN_500} ;
+    border-color: ${({ theme }) => theme.COLORS.Azul} ;
 `;
 
 export const Container = styled.View`

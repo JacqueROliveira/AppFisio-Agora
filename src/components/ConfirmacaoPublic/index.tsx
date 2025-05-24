@@ -1,8 +1,7 @@
-import { Float } from 'react-native/Libraries/Types/CodegenTypes';
 import { Container, Title, SubTitle, Position, TextSelecao, CadastroLogo, Preco, Value, Texto, DiaHorario, Logo } from './style'
 import { useTheme } from 'styled-components/native'
 import Svg, { Line } from 'react-native-svg';
-import logoimg from 'assets/Logo-letra.png'
+import logo from 'assets/Logo.png'
 import { ButtonVoltarPublic } from '@components/Button';
 import { useNavigation } from '@react-navigation/native';
 import { RouteProp, useRoute, NavigationProp } from '@react-navigation/native';
@@ -64,7 +63,7 @@ export function ConfirmacaoPublic() {
                     y1="50%"
                     x2="100%"
                     y2="50%"
-                    stroke={COLORS.GREEN_500}
+                    stroke={COLORS.Azul}
                 />
             </Svg>
 
@@ -82,7 +81,7 @@ export function ConfirmacaoPublic() {
                 {horario}
             </DiaHorario>
 
-            <Logo source={logoimg} />
+            <Logo source={logo} />
             <ButtonVoltarPublic
                 title="Inicio"
                 type='PRIMARY'

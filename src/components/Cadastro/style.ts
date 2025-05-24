@@ -21,11 +21,12 @@ export const Input = styled.Text`
 `;
 
 export const ClicHere = styled(TouchableOpacity)`
-    border-color: ${({ theme }) => theme.COLORS.GREEN_500} ;
+    border-color: ${({ theme }) => theme.COLORS.Azul} ;
 `;
 
 export const Container = styled.View`
     flex: 1;
+    margin-top: 20px;
     background-color: ${({ theme }) => theme.COLORS.WHITE};
     padding: 10px 24px;
     align-items: center;
@@ -58,15 +59,15 @@ export const Flatlist = styled.View`
 
 export const TextSelecao = styled.Text`
     font-size: ${({ theme }) => theme.FONT_SIZE.XL}px;
-    color: ${({ theme}) => theme.COLORS.STELLBLUE};
-    font-family: ${({ theme}) => theme.FONT_FAMILY.REGULAR};
+    color: ${({ theme}) => theme.COLORS.Laranja};
+    font-family: ${({ theme}) => theme.FONT_FAMILY.BOLD};
 `;
 export const CadastroLogo = styled.Text`
     width: 70%;
     height: 50px;
     background-color: ${({ theme }) => theme.COLORS.WHITE};
     border: 5px;
-    border-color: ${({ theme}) => theme.COLORS.STELLBLUE};
+    border-color: ${({ theme}) => theme.COLORS.Laranja};
     align-items: center;
     justify-content: center;
     border-radius: 50px;

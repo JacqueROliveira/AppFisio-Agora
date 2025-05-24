@@ -1,6 +1,6 @@
 import { Logo, Container1, Container2, Title, SubTitle, Container, Container3 } from './styles'
 import { TouchableOpacityProps } from 'react-native';
-import logoimg from 'assets/Logo-letra.png'
+import logo from 'assets/Logo.png'
 import { useNavigation } from '@react-navigation/native';
 import { useUser } from 'src/contexts/UserContext';
 import type { RootStackParamList } from '@components/routes/app.routes';
@@ -33,7 +33,7 @@ export function GroupCard() {
     return (
         <>
             <Container>
-                <Logo source={logoimg} />
+                <Logo source={logo} />
 
                 <SubTitle>
                     Escolha a modalidade:

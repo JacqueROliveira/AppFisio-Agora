@@ -1,5 +1,5 @@
 import { Container, SubTitle, TextSelecao, CadastroLogo, Logo,  Title, Position } from './style'
-import logoimg from 'assets/Logo-letra.png'
+import logo from 'assets/Logo.png'
 import { ButtonCadastro } from '@components/Button';
 import { useNavigation } from '@react-navigation/native';
 import Svg, { Line } from 'react-native-svg';
@@ -81,7 +81,7 @@ export function AgendamentoPublic() {
     },
     label: {
       fontSize: 16,
-      color: '#699260',
+      color: '#4167F0',
       marginBottom: 10,
       fontWeight: '600',
       alignItems: 'center',
@@ -90,16 +90,16 @@ export function AgendamentoPublic() {
     },
     input: {
       borderWidth: 2,
-      borderColor: '#699260',
+      borderColor: '#4167F0',
       borderRadius: 8,
       padding: 5,
       backgroundColor: '#fff',
-      color: '#699260',
+      color: '#4167F0',
       alignItems: 'center',
       justifyContent: 'center',
     },
     inputText: {
-      color: '#699260',
+      color: '#4167F0',
       fontSize: 20,
     },
     optionsContainer: {
@@ -110,10 +110,10 @@ export function AgendamentoPublic() {
       backgroundColor: '#fff',
       borderRadius: 8,
       borderWidth: 2,
-      borderColor: '#699260',
+      borderColor: '#4167F0',
       overflow: 'hidden',
       elevation: 5,
-      shadowColor: '#699260',
+      shadowColor: '#4167F0',
       shadowOffset: {
         width: 0,
         height: 2,
@@ -127,20 +127,20 @@ export function AgendamentoPublic() {
       borderBottomColor: '#3E768C20',
     },
     optionText: {
-      color: '#699260',
+      color: '#4167F0',
       fontSize: 16,
     },
     selectedOption: {
       backgroundColor: '#3E768C10',
     },
     placeholder: {
-      color: '#699260',
+      color: '#4167F0',
       fontSize: 16,
     },
     arrowIcon: {
       right: 0,
       top: 0,
-      color: '#699260',
+      color: '#4167F0',
       fontSize: 20,
       marginLeft: 300,
     },
@@ -267,7 +267,7 @@ export function AgendamentoPublic() {
           onPress={() => handleConfirmacaoPublic(nome, endereco, selectedDate, selectedTime)}
         />
 
-        <Logo source={logoimg} />
+        <Logo source={logo} />
       </Container>
     </>
   );

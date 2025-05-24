@@ -1,9 +1,8 @@
-import { Float } from 'react-native/Libraries/Types/CodegenTypes';
 import { Container, Title, SubTitle, Position, TextSelecao, CadastroLogo, Preco, Value, Texto, DiaHorario, Logo } from './style'
 import { useTheme } from 'styled-components/native'
 import Svg, { Line } from 'react-native-svg';
-import logoimg from 'assets/Logo-letra.png'
-import { Button, ButtonVoltarPrivat } from '@components/Button';
+import logo from 'assets/Logo.png'
+import { ButtonVoltarPrivat } from '@components/Button';
 import { useNavigation } from '@react-navigation/native';
 import { RouteProp, useRoute, NavigationProp } from '@react-navigation/native';
 
@@ -68,7 +67,7 @@ export function ConfirmacaoPrivat() {
                     y1="50%"
                     x2="100%"
                     y2="50%"
-                    stroke={COLORS.STELLBLUE}
+                    stroke={COLORS.Azul}
                 />
             </Svg>
 
@@ -86,7 +85,7 @@ export function ConfirmacaoPrivat() {
                 {horario}
             </DiaHorario>
 
-            <Logo source={logoimg} />
+            <Logo source={logo} />
             <ButtonVoltarPrivat
                 title="Inicio"
                 onPress={handleNewGroup}

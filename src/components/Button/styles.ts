@@ -11,11 +11,12 @@
         min-height: 36px;
         max-height: 36px;
         width: 100%;
-        background-color: ${({ theme, type}) => type ==='PRIMARY' ? theme.COLORS.GREEN_500 : theme.COLORS.STELLBLUE};
+        background-color: ${({ theme, type}) => type ==='PRIMARY' ? theme.COLORS.Azul : theme.COLORS.Laranja};
         border-radius: 12px;
         justify-content: center;
         align-items: center;
         margin-bottom: 15px;
+        margin-top: 10px;
     `;
     export const Title = styled.Text`
         font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
@@ -24,7 +25,7 @@
     `;
     export const SubTitle = styled.Text`
         font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
-        color: ${({ theme }) => theme.COLORS.GREEN_700};
+        color: ${({ theme }) => theme.COLORS.Azul};
         font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
         text-align: center;
         width: 90%;
@@ -32,12 +33,12 @@
     `;
     export const ClickHere = styled(TouchableOpacity)`
         font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
-        color: ${({ theme}) => theme.COLORS.GREEN_700};
+        color: ${({ theme}) => theme.COLORS.Azul};
         font-family: ${({ theme}) => theme.FONT_FAMILY.REGULAR};
     `;
     export const StyledText = styled.Text`
         text-decoration: underline;
         font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
-        color: ${({ theme}) => theme.COLORS.GREEN_700};
+        color: ${({ theme}) => theme.COLORS.Azul};
         font-family: ${({ theme}) => theme.FONT_FAMILY.BOLD};
     `;

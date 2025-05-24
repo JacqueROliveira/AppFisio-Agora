@@ -1,5 +1,5 @@
 import { Logo, Container, SubTitle } from '@components/Login/style'
-import logoimg from 'assets/Logo-letra.png'
+import logo from 'assets/Logo.png'
 import { Button } from '@components/Button';
 import { Input, Password } from '@components/Input';
 import { useNavigation } from '@react-navigation/native';
@@ -46,7 +46,7 @@ export function LoginScreen() {
     return (
         <>
             <Container>
-                <Logo source={logoimg} />
+                <Logo source={logo} />
 
                 <Input
                     placeholder='E-mail'

@@ -1,5 +1,5 @@
 import { Container, SubTitle, TextSelecao, CadastroLogo, Logo, Title, Position, Preco, Value } from './style'
-import logoimg from 'assets/Logo-letra.png'
+import logo from 'assets/Logo.png'
 import { ButtonCadastro } from '@components/Button';
 import { useNavigation } from '@react-navigation/native';
 import Svg, { Line } from 'react-native-svg';
@@ -84,7 +84,7 @@ export function AgendamentoPrivat() {
     },
     label: {
       fontSize: 16,
-      color: '#3E768C',
+      color: '#4167F0',
       marginBottom: 10,
       fontWeight: '600',
       alignItems: 'center',
@@ -93,16 +93,16 @@ export function AgendamentoPrivat() {
     },
     input: {
       borderWidth: 2,
-      borderColor: '#3E768C',
+      borderColor: '#4167F0',
       borderRadius: 8,
       padding: 5,
       backgroundColor: '#fff',
-      color: '#3E768C',
+      color: '#4167F0',
       alignItems: 'center',
       justifyContent: 'center',
     },
     inputText: {
-      color: '#3E768C',
+      color: '#4167F0',
       fontSize: 20,
     },
     optionsContainer: {
@@ -113,10 +113,10 @@ export function AgendamentoPrivat() {
       backgroundColor: '#fff',
       borderRadius: 8,
       borderWidth: 2,
-      borderColor: '#3E768C',
+      borderColor: '#4167F0',
       overflow: 'hidden',
       elevation: 5,
-      shadowColor: '#3E768C',
+      shadowColor: '#4167F0',
       shadowOffset: {
         width: 0,
         height: 2,
@@ -127,23 +127,23 @@ export function AgendamentoPrivat() {
     option: {
       padding: 12,
       borderBottomWidth: 1,
-      borderBottomColor: '#3E768C20',
+      borderBottomColor: '#4167F0',
     },
     optionText: {
-      color: '#3E768C',
+      color: '#4167F0',
       fontSize: 16,
     },
     selectedOption: {
       backgroundColor: '#3E768C10',
     },
     placeholder: {
-      color: '#3E768C',
+      color: '#4167F0',
       fontSize: 16,
     },
     arrowIcon: {
       right: 0,
       top: 0,
-      color: '#3E768C',
+      color: '#4167F0',
       fontSize: 20,
       marginLeft: 300,
     },
@@ -187,7 +187,7 @@ export function AgendamentoPrivat() {
             y1="50%"
             x2="100%"
             y2="50%"
-            stroke={COLORS.STELLBLUE}
+            stroke={COLORS.Azul}
           />
 
         </Svg>
@@ -273,11 +273,11 @@ export function AgendamentoPrivat() {
 
         <ButtonCadastro
           title="CONCLUIR AGENDAMENTO"
-          type='SECONDARY'
+          type='PRIMARY'
           onPress={() => handleConfirmacaoPrivat(nome, endereco, preco, selectedDate, selectedTime)}
         />
 
-        <Logo source={logoimg} />
+        <Logo source={logo} />
       </Container>
     </>
   );

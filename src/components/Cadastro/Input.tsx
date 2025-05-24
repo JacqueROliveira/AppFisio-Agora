@@ -9,6 +9,7 @@ export function Input({ ...rest }: TextInputProps) {
         borderRadius: 7,
         borderColor: "#999",
         paddingHorizontal: 16,
+        marginTop: 5,
       }}
       {...rest}
     />

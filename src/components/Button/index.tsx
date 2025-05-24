@@ -1,5 +1,5 @@
-import { TouchableOpacityProps, View } from 'react-native'
-import { ClickHere, StyledText, Container, Title, SubTitle } from './styles'
+import { TouchableOpacityProps} from 'react-native'
+import { Container, Title } from './styles'
 
 export type ButtonTypeStyleProps = 'PRIMARY' | 'SECONDARY';
 
@@ -48,7 +48,7 @@ export function ButtonVoltarPublic({ title, type = 'PRIMARY', ...rest }: Props) 
 
     );
 }
-export function ButtonVoltarPrivat({ title, type = 'SECONDARY', ...rest }: Props) {
+export function ButtonVoltarPrivat({ title, type = 'PRIMARY', ...rest }: Props) {
     return (
 
         <Container

@@ -5,22 +5,22 @@ export const Container1 = styled(TouchableOpacity)`
     width: 100%;
     height: 80´x;
     background-color: ${({ theme }) => theme.COLORS.WHITE};
-    color: ${({ theme }) => theme.COLORS.GREEN_500};
+    color: ${({ theme }) => theme.COLORS.Azul};
     border-radius: 12px;
     padding: 12px;
     margin-bottom: 12px;
-    border-color: ${({ theme }) => theme.COLORS.GREEN_500};
+    border-color: ${({ theme }) => theme.COLORS.Azul};
     border-width:2px;
 `;
 export const Container2 = styled(TouchableOpacity)`
     width: 100%;
     height: 80´x;
     background-color: ${({ theme }) => theme.COLORS.WHITE};
-    color: ${({ theme }) => theme.COLORS.GREEN_500};
+    color: ${({ theme }) => theme.COLORS.Azul};
     border-radius: 12px;
     padding: 12px;
     margin-bottom: 12px;
-    border-color: ${({ theme }) => theme.COLORS.GREEN_500};
+    border-color: ${({ theme }) => theme.COLORS.Azul};
     border-width:2px;
 `;
 export const Container3 = styled(TouchableOpacity)`
@@ -28,15 +28,15 @@ export const Container3 = styled(TouchableOpacity)`
     height: 80´x;
 
     background-color: ${({ theme }) => theme.COLORS.WHITE};
-    color: ${({ theme }) => theme.COLORS.GREEN_500};
+    color: ${({ theme }) => theme.COLORS.Azul};
     border-radius: 12px;
     padding: 12px;
     margin-bottom: 12px;
-    border-color: ${({ theme }) => theme.COLORS.GREEN_500};
+    border-color: ${({ theme }) => theme.COLORS.Azul};
     border-width:2px;
 `;
 export const Preco = styled.Text`
-    background-color: ${({ theme }) => theme.COLORS.GREEN_500};
+    background-color: ${({ theme }) => theme.COLORS.Azul};
     color: ${({ theme }) => theme.COLORS.WHITE};
     border-radius: 12px;
     margin-bottom: 6px;
@@ -44,7 +44,7 @@ export const Preco = styled.Text`
     padding: 12px;
     font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
     font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
-    border-color: ${({ theme }) => theme.COLORS.GREEN_500};
+    border-color: ${({ theme }) => theme.COLORS.Azul};
     border-width:2px;
     width: 30%;
     height: 15´x;
@@ -54,9 +54,9 @@ export const Position = styled(TouchableOpacity)`
     flex-direction: row;
 `;
 export const Agendar = styled(TouchableOpacity)`
-    background-color: ${({ theme }) => theme.COLORS.GREEN_500};
+    background-color: ${({ theme }) => theme.COLORS.Azul};
     border-radius: 12px;
-    border-color: ${({ theme }) => theme.COLORS.GREEN_500};
+    border-color: ${({ theme }) => theme.COLORS.Azul};
     border-width:2px;
     padding: 6px;
     font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
@@ -66,12 +66,12 @@ export const Agendar = styled(TouchableOpacity)`
 `;
 export const Title = styled.Text`
     font-size: ${({ theme }) => theme.FONT_SIZE.XL}px;
-    color: ${({ theme }) => theme.COLORS.STELLBLUE};
+    color: ${({ theme }) => theme.COLORS.Azul};
     font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
 `;
 export const SubTitle = styled.Text`
     font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
-    color: ${({ theme }) => theme.COLORS.STELLBLUE};
+    color: ${({ theme }) => theme.COLORS.Azul};
     font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
     margin-bottom: 12px;
 `;
@@ -90,7 +90,7 @@ export const Value = styled.Text`
 export const Privat = styled.Text`
     width: 100%;
     height: 60px;
-    background-color: ${({ theme }) => theme.COLORS.GREEN_500};
+    background-color: ${({ theme }) => theme.COLORS.Laranja};
     align-items: center;
     justify-content: center;
     border-radius: 50px;
