@@ -22,6 +22,14 @@ O **Fisio Agora!** é um sistema desenvolvido para facilitar o acesso de pacient
 
 ---
 
+## 🚀 Landing Page
+
+![Landing](assetss/landing.png)
+
+[Veja a Landing Page](https://serene-maamoul-090dc9.netlify.app/)
+
+---
+
 ## 📊 Diagrama de Entidade e Relacionamento (DER)
 
 O **DER** apresenta as principais entidades do sistema e seus relacionamentos.
